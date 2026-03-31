@@ -111,7 +111,7 @@ const login = async(req,res)=>{
         role: user.role ,
         verified: user.verified
       }
-      
+
         
         // Storing cookie
       res.cookie('token' , jwtToken , {maxAge: 24*60*60*1000 , httpOnly: true,secure: true,sameSite: 'none'}) ;
@@ -120,6 +120,7 @@ const login = async(req,res)=>{
         user: reply ,
         message: "Logged in Successfully"
       })
+      
     }
     catch(err){
         res.status(401).send("Error: " + err) ;
