@@ -17,6 +17,7 @@ authRouter.post('/phone/send-otp', sendPhoneOtp);
 authRouter.post('/phone/verify-otp', verifyPhoneOtp);
 // authRouter.get('/github', githubStart);
 // authRouter.get('/github/callback', githubCallback);
+
 authRouter.get('/me', getMe);
 
 module.exports = authRouter;
