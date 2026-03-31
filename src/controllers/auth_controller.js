@@ -111,6 +111,7 @@ const login = async(req,res)=>{
         role: user.role ,
         verified: user.verified
       }
+      
         
         // Storing cookie
       res.cookie('token' , jwtToken , {maxAge: 24*60*60*1000 , httpOnly: true,secure: true,sameSite: 'none'}) ;
