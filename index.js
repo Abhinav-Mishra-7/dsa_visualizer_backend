@@ -13,7 +13,7 @@ app.use(express.json());
 
 // ✅ CORS FIRST
 const corsOptions = {
-  origin: "https://dsa-visualizer-hw2f.onrender.com",
+  origin: proccess.env.CLIENT_URL,
   credentials: true,
 };
 app.use(cors(corsOptions));
