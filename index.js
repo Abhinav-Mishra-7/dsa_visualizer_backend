@@ -30,6 +30,10 @@ const quizRouter = require("./src/routes/quiz_route");
 const authRouter = require("./src/routes/auth_route");
 const emailRouter = require("./src/routes/emailVerify") ;
 
+app.get('/', (req, res) => {
+  res.send('Backend is running!');
+});
+
 // Setting security headers
 app.use("/ai", aiRouter);
 app.use("/quiz", quizRouter);
