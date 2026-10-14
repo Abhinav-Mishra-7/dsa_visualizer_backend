@@ -1,7 +1,7 @@
 const mongoose = require("mongoose") ;
 const dns = require("node:dns");
 
-const resolver = new dns.Resolver();
+const resolver = new dns.Resolver(); 
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 

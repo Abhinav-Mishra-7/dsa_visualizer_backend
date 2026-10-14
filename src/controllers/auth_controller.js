@@ -81,7 +81,6 @@ const register = async (req, res) => {
 const login = async(req,res)=>{
        
     try{
-        
       const email = req.body.email ;
       const password = req.body.password ;
 
