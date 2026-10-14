@@ -149,7 +149,7 @@ exports.getChatById = async (req, res) => {
 exports.chatStreamController = async (req, res) => {
   try {
     const { message, messages = [], algorithmName, description } = req.body;
-    console.log("REQ BODY:", req.body);
+    // console.log("REQ BODY:", req.body);
 
     if (!message) {
       return res.status(400).json({ error: "Message is required" });
@@ -165,7 +165,7 @@ exports.chatStreamController = async (req, res) => {
     const safeAlgorithmName = safeString(algorithmName);
     const safeDescription = safeString(description);
 
-    console.log("✅ CLEAN INPUT:", safeAlgorithmName, safeDescription);
+    // console.log("✅ CLEAN INPUT:", safeAlgorithmName, safeDescription);
 
     // 🔥 SSE headers
     res.setHeader("Content-Type", "text/event-stream");
@@ -176,7 +176,7 @@ exports.chatStreamController = async (req, res) => {
 
     // ✅ Gemini model
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.5-flash",
+      model: "gemini-3.8-flash",
     });
 
     // ✅ CLEAN HISTORY (no undefined / empty parts)
