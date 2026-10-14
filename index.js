@@ -13,7 +13,7 @@ app.use(express.json());
 
 // ✅ CORS FIRST
 const corsOptions = {
-  origin: proccess.env.CLIENT_URL,
+  origin: process.env.CLIENT_URL,
   credentials: true,
 };
 app.use(cors(corsOptions));
