@@ -20,7 +20,7 @@ const generateOTP = async (req,res)=>{
       const ans = await Otp.findOneAndUpdate({ email },{otp , createdAt: new Date() } ,{ upsert: true, new: true});
       // Send OTP via email
       await sendVerificationEmail(email , otp) ;
-        
+          
       const reply = {
         email: email ,
         message: message ,

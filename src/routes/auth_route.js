@@ -1,5 +1,5 @@
 const express = require('express');
-const { login, sendPhoneOtp, verifyPhoneOtp, githubStart, githubCallback , getMe, googleLogin, checkAuth, logout, register} = require('../controllers/auth_controller');
+const { login, sendPhoneOtp, verifyPhoneOtp, githubStart, githubCallback , getMe, googleLogin, checkAuth, logout, register} = require('../controllers/auth_controller');      
 const {userMiddleware} = require("../middleware/userMiddleware") ;
 const {generateOTP,verifyOTP} = require("../controllers/emailVerication") ;
 
